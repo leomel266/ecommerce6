@@ -1,0 +1,28 @@
+.purchase-container {
+  border: 1px solid #aaa5;
+  border-radius: 1em;
+  margin-top: 1.5em;
+  margin-bottom: 2em;
+}
+
+.purchase__info {
+  border: 1px solid #aaa5;
+  display: flex;
+  justify-content: space-around;
+}
+
+.purchase__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.purchase__span-quantity {
+  border: 1px solid #aaa5;
+  width: 40px;
+  text-align: center;
+}

@@ -1,0 +1,40 @@
+.description-container {
+  width: 100%;
+  text-align: center;
+}
+
+.description__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.btn-container {
+  width: 100px;
+  height: 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 22px;
+  justify-content: center;
+  border: 1px solid #aaa5;
+}
+
+.btn {
+  color: #f85555;
+  font-size: 1.5rem;
+}
+
+.description__add {
+  width: 200px;
+  background-color: #f85555;
+  height: 40px;
+  color: white;
+  margin-bottom: 1.5em;
+}
+
+.description__p {
+  margin-bottom: 1.5em;
+}

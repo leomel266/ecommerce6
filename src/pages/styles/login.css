@@ -1,0 +1,37 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #aaa5;
+  width: 300px;
+  height: 400px;
+  margin: auto;
+  text-align: center;
+}
+
+.login__suggest {
+  background: #aaa5;
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login__btn {
+  background-color: #f85555;
+  color: white;
+  width: 100px;
+  margin-top: 1em;
+  height: 40px;
+}

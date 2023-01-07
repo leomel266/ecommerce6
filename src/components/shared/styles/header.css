@@ -1,0 +1,32 @@
+.header-container {
+  height: 80px;
+}
+
+.navbar {
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #aaa5;
+}
+
+.navbar__list {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  margin: 1em;
+}
+
+.navbar__title {
+  margin: 1em;
+  color: #f85555;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.navbar__list-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

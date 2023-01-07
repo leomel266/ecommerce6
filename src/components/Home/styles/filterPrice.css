@@ -1,0 +1,25 @@
+.filter-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.filter__input {
+  margin: 0.5em;
+  border: 1px solid #aaa5;
+}
+
+.filter__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.filter__aplly {
+  margin: 0.5em;
+  border-radius: 1em;
+  width: 60px;
+  background-color: #f85555;
+  color: white;
+}

@@ -1,0 +1,22 @@
+.cart-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.footer__btn {
+  background-color: #f85555;
+  color: white;
+  width: 100px;
+  height: 40px;
+}
+
+.cart__p::before {
+  content: "$";
+}
+
+.cart__title {
+  margin-left: 1em;
+}

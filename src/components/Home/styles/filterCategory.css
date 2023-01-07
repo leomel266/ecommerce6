@@ -1,0 +1,12 @@
+.filter__category-container {
+  width: 100%;
+  text-align: center;
+}
+
+.filter__category-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+}

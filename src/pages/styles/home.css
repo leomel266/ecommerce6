@@ -1,0 +1,14 @@
+.products-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.home__input {
+  display: flex;
+  margin: auto;
+  border: 1px solid #aaa5;
+  height: 35px;
+  width: 300px;
+}

@@ -1,0 +1,15 @@
+.cart-product {
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #aaa5;
+  display: flex;
+  text-align: center;
+  gap: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.cart__quantity {
+  border: 1px solid #aaa5;
+  width: 40px;
+}
