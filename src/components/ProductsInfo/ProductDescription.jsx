@@ -2,7 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserCart } from "../../store/slices/cart.slice";
-import getConfig from "../../utils/GetConfig";
+import getConfig from "../../utils/getConfig";
 import "./styles/productDescription.css";
 
 const ProductDescription = ({ product }) => {

@@ -5,7 +5,6 @@ import {
   getAllProducts,
   getAllProductsByCategory,
 } from "../../store/slices/products.slice";
-
 import "./styles/filterCategory.css";
 
 const FilterCategory = ({ setInputValue }) => {

@@ -3,7 +3,7 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getUserCart } from "../../store/slices/cart.slice";
-import getConfig from "../../utils/GetConfig";
+import getConfig from "../../utils/getConfig";
 import "./styles/cardProduct.css";
 
 const CardProducts = ({ product }) => {
