@@ -30,3 +30,72 @@
   justify-content: center;
   align-items: center;
 }
+
+.respmenu input[type="checkbox"],
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  font-size: 48px;
+  pointer-events: none;
+}
+
+.respmenu input[type="checkbox"] {
+  opacity: 0;
+}
+
+.respmenu {
+  color: #f85555;
+  position: relative;
+  background: white;
+  min-height: 48px;
+  margin-bottom: 1.3em;
+}
+
+.rasp__menu-item a {
+  color: #f85555;
+  font-weight: 600;
+  padding-left: 0.3em;
+}
+
+.rasp__menu-item {
+  margin-top: 0.4em;
+}
+
+.respmenu nav {
+  display: none;
+}
+
+.respmenu input:checked ~ nav {
+  display: block;
+}
+
+.respmenu input:checked ~ .fa-bars {
+  display: none;
+}
+
+.respmenu input:not(:checked) ~ .fa-times {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .header-container {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .respmenu {
+    display: none;
+  }
+}

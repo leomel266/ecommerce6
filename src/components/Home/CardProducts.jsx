@@ -9,6 +9,7 @@ import "./styles/cardProduct.css";
 const CardProducts = ({ product }) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const cart = useSelector((state) => state.cart);
 
   const handleClick = () => {
@@ -57,7 +58,7 @@ const CardProducts = ({ product }) => {
         <img className='product__img' src={product.productImgs[1]} alt='' />
       </header>
       <section className='product__body'>
-        <h3 className='product__name'>{product.title}</h3>
+        <h3 className='product__name'>{product.title.substring(0, 51)}</h3>
         <article className='product__price-container'>
           <span className='product__price-label'>Price</span>
           <h4 className='product__price-number'>{product.price}</h4>

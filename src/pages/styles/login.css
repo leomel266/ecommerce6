@@ -28,10 +28,22 @@
   justify-content: center;
   align-items: center;
 }
-.login__btn {
+.login__btn,
+.login__btn-active {
   background-color: #f85555;
   color: white;
   width: 100px;
   margin-top: 1em;
   height: 40px;
+}
+
+/* Login Active*/
+
+.login-container-active {
+  height: 100vh;
+  text-align: center;
+}
+
+.login__btn-active {
+  margin-top: 2em;
 }

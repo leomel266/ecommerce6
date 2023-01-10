@@ -11,9 +11,9 @@ const PurchaseCard = ({ purchase }) => {
           {purchase.cart.products.map((prod) => (
             <li className='purchase__item' key={prod.id}>
               <h4 className='purchase__title-prod'>{prod.title}</h4>
-              <span className='purchase__span-quantity'>
+              <div className='purchase__span-quantity'>
                 {prod.productsInCart.quantity}
-              </span>
+              </div>
               <span className='purchase__span-price'>${prod.price}</span>
             </li>
           ))}

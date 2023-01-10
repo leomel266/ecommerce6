@@ -24,11 +24,11 @@ const CartProduct = ({ product }) => {
         <h3>{product.title}</h3>
       </header>
       <div className='cart__quantity'>{product.productsInCart.quantity}</div>
-      <div>
-        <p>Unit Price:</p>
+      <div className='unit__container'>
+        <p className='unit__price'>Unit Price:</p>
         <span>${product.price}</span>
       </div>
-      <button onClick={handleDelete}>
+      <button className='btn__trash' onClick={handleDelete}>
         <i className='fa-regular fa-trash-can'></i>
       </button>
     </article>

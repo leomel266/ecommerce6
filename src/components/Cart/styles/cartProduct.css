@@ -13,3 +13,8 @@
   border: 1px solid #aaa5;
   width: 40px;
 }
+
+.btn__trash {
+  color: #f85555;
+  background-color: white;
+}

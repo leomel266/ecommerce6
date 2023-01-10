@@ -40,9 +40,11 @@ const Login = () => {
 
   if (isLogged) {
     return (
-      <div>
-        <h1>User Logged</h1>
-        <button onClick={handleLogOut}>Logout</button>
+      <div className='login-container-active'>
+        <h1 className='login__title-active'>User Logged</h1>
+        <button className='login__btn-active' onClick={handleLogOut}>
+          Logout
+        </button>
       </div>
     );
   }
