@@ -50,6 +50,22 @@
   width: 100%;
 }
 
+.purchase__total {
+  text-align: center;
+}
+
+.total__container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.purchase__total::before {
+  content: "$";
+}
+
 @media screen and (min-width: 300px) {
   .purchase__info {
     width: 100%;

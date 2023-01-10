@@ -51,35 +51,37 @@ const Login = () => {
 
   return (
     <div className='login-container'>
-      <p className='login__p'>
-        Welcome! Enter your email and password to continue
-      </p>
-      <div className='login__suggest'>
-        <p className='p__test'>Test Data</p>
-        <ul className='login__test'>
-          <li className='login__item'>john@gmail.com</li>
-          <li className='login__item'>john1234</li>
-        </ul>
+      <div className='login__box'>
+        <p className='login__p'>
+          <strong>Welcome!</strong> Enter your email and password to continue
+        </p>
+        <div className='login__suggest'>
+          <p className='p__test'>Test Data</p>
+          <ul className='login__test'>
+            <li className='login__item'>john@gmail.com</li>
+            <li className='login__item'>john1234</li>
+          </ul>
+        </div>
+        <form className='login__form' onSubmit={handleSubmit(submit)}>
+          <div className='login__div'>
+            <input
+              placeholder='Email'
+              type='text'
+              id='email'
+              {...register("email")}
+            />
+          </div>
+          <div className='login__div'>
+            <input
+              placeholder='Password'
+              type='password'
+              id='password'
+              {...register("password")}
+            />
+          </div>
+          <button className='login__btn'>Login</button>
+        </form>
       </div>
-      <form className='login__form' onSubmit={handleSubmit(submit)}>
-        <div className='login__div'>
-          <input
-            placeholder='Email'
-            type='text'
-            id='email'
-            {...register("email")}
-          />
-        </div>
-        <div>
-          <input
-            placeholder='Password'
-            type='password'
-            id='password'
-            {...register("password")}
-          />
-        </div>
-        <button className='login__btn'>Login</button>
-      </form>
     </div>
   );
 };

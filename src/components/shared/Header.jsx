@@ -30,14 +30,16 @@ const Header = () => {
         </nav>
       </header>
       {/* Header on small devices */}
-      <div class='respmenu'>
+      <div className='respmenu'>
         <input type='checkbox' />
         <i className='fas fa-bars'></i>
         <i className='fas fa-times'></i>
         <nav className='raspmenu__nav'>
           <ul className='raspmenu__list'>
             <li className='rasp__menu-item'>
-              <Link to='/'>e-commerce</Link>
+              <Link style={{ color: "#f85555" }} to='/'>
+                e-commerce
+              </Link>
             </li>
             <li className='rasp__menu-item'>
               <Link to='/login'>Login</Link>

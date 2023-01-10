@@ -1,9 +1,9 @@
 .header-container {
-  height: 80px;
+  width: 100%;
 }
 
 .navbar {
-  height: 40px;
+  height: 55px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,7 +63,7 @@
 }
 
 .rasp__menu-item a {
-  color: #f85555;
+  color: #515151;
   font-weight: 600;
   padding-left: 0.3em;
 }

@@ -1,4 +1,15 @@
 .login-container {
+  height: 100vh;
+  width: 100%;
+  background-color: hsla(0, 1%, 72%, 0.1);
+  position: relative;
+}
+
+.login__p {
+  padding: 0.2em;
+}
+
+.login__box {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,6 +19,11 @@
   height: 400px;
   margin: auto;
   text-align: center;
+  background-color: white;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 20%;
 }
 
 .login__suggest {
@@ -20,6 +36,10 @@
   align-items: center;
   margin-bottom: 1em;
   margin-top: 1em;
+}
+
+.login__div {
+  margin: 0.5em;
 }
 
 .login__form {
