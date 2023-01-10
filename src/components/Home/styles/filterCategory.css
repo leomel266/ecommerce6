@@ -10,3 +10,7 @@
   align-items: center;
   gap: 0.5em;
 }
+
+.filter__category-item {
+  cursor: pointer;
+}

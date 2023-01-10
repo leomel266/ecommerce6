@@ -48,7 +48,7 @@ const FilterPrice = ({ setInputPrice }) => {
             id='to'
           />
         </div>
-        <button className='filter__aplly'>Aplly</button>
+        <button className='filter__aplly'>Apply</button>
       </form>
     </section>
   );
