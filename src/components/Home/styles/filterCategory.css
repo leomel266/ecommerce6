@@ -3,6 +3,11 @@
   text-align: center;
 }
 
+.filter__category-title {
+  margin-top: 0.5em;
+  margin-bottom: 0.9em;
+}
+
 .filter__category-list {
   display: flex;
   flex-direction: column;
