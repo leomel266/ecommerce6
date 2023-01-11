@@ -17,6 +17,11 @@
   margin: 1em;
 }
 
+.rasp__menu-item-p {
+  font-weight: 500;
+  text-transform: lowercase;
+}
+
 .navbar__title {
   margin: 1em;
   color: #f85555;
@@ -70,6 +75,11 @@
 
 .rasp__menu-item {
   margin-top: 0.4em;
+}
+
+.rasp__menu-item:nth-child(3) {
+  font-weight: 600;
+  margin-left: 0.3em;
 }
 
 .respmenu nav {

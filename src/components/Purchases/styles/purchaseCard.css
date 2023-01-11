@@ -52,6 +52,7 @@
 
 .purchase__total {
   text-align: center;
+  color: white;
 }
 
 .total__container {
@@ -60,6 +61,13 @@
   gap: 20px;
   justify-content: center;
   align-items: center;
+  background-color: #f85555;
+  border-radius: 0 0 0.3em 0.3em;
+}
+
+.total__p {
+  color: white;
+  font-weight: 500;
 }
 
 .purchase__total::before {

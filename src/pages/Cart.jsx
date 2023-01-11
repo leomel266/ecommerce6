@@ -6,9 +6,8 @@ import { getUserCart } from "../store/slices/cart.slice";
 import getConfig from "../utils/getConfig";
 import "./styles/cart.css";
 
-const Cart = () => {
+const Cart = ({ cartShow }) => {
   const cartProducts = useSelector((state) => state.cart);
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -34,7 +33,7 @@ const Cart = () => {
   };
 
   return (
-    <section className='cart-container'>
+    <section className={`cart-container-${cartShow}`}>
       <h2 className='cart__title'>Cart</h2>
       <div className='cart__product-container'>
         {cartProducts?.map((product) => (

@@ -20,7 +20,7 @@ const PurchaseCard = ({ purchase }) => {
         </ul>
       </div>
       <div className='total__container'>
-        <p>Total:</p>
+        <p className="total__p">Total:</p>
         <span className='purchase__total'>
           {purchase
             ? purchase.cart.products.reduce((acc, cv) => {

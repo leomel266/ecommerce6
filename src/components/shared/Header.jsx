@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import Cart from "../../pages/Cart";
 import "./styles/header.css";
 
 const Header = () => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/");
+  };
+
+  const [cartShow, setCartShow] = useState(false);
+
+  const handleCart = () => {
+    if (cartShow === false) {
+      setCartShow(true);
+    } else {
+      setCartShow(false);
+    }
   };
 
   return (
@@ -20,8 +31,10 @@ const Header = () => {
             <li className='navbar__list-item fa-solid fa-user'>
               <Link to='/login'>Login</Link>
             </li>
-            <li className='navbar__list-item fa-solid fa-box-archive'>
-              <Link to='/cart'>Cart</Link>
+            <li
+              className='navbar__list-item fa-solid fa-box-archive'
+              onClick={handleCart}>
+              <p>Cart</p>
             </li>
             <li className='navbar__list-item fa-solid fa-cart-shopping'>
               <Link to='/purchases'>Purchases</Link>
@@ -44,8 +57,8 @@ const Header = () => {
             <li className='rasp__menu-item'>
               <Link to='/login'>Login</Link>
             </li>
-            <li className='rasp__menu-item'>
-              <Link to='/cart'>Cart</Link>
+            <li className='rasp__menu-item' onClick={handleCart}>
+              Cart
             </li>
             <li className='rasp__menu-item'>
               <Link to='/purchases'>Purchases</Link>
@@ -53,6 +66,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
+      <Cart cartShow={cartShow} />
     </>
   );
 };

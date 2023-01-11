@@ -3,8 +3,9 @@
   margin-bottom: 20px;
   border: 1px solid #aaa5;
   display: flex;
+  flex-direction: column;
   text-align: center;
-  gap: 40px;
+  gap: 10px;
   justify-content: center;
   align-items: center;
 }
@@ -21,4 +22,11 @@
 
 .unit__price {
   margin-bottom: 0.3em;
+}
+
+@media screen and (min-width: 600px) {
+  .cart-product {
+    flex-direction: row;
+    justify-content: space-around;
+  }
 }
