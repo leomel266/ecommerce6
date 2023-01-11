@@ -41,10 +41,19 @@ const Login = () => {
   if (isLogged) {
     return (
       <div className='login-container-active'>
-        <h1 className='login__title-active'>User Logged</h1>
-        <button className='login__btn-active' onClick={handleLogOut}>
-          Logout
-        </button>
+        <div className='login__box'>
+          <h1 className='login__title-active'>User Logged</h1>
+          <div className='img__container'>
+            <img
+              className='img__user'
+              src='https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Default_pfp.svg/1200px-Default_pfp.svg.png'
+              alt=''
+            />
+          </div>
+          <button className='login__btn-active' onClick={handleLogOut}>
+            Logout
+          </button>
+        </div>
       </div>
     );
   }

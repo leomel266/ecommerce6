@@ -58,9 +58,27 @@
 
 /* Login Active*/
 
-.login-container-active {
+.login__box {
   height: 100vh;
   text-align: center;
+  border: 1px solid #aaa5;
+  width: 300px;
+  margin: auto;
+}
+
+.login-container-active {
+  width: 100%;
+  padding-top: 1.5em;
+}
+
+.img__container {
+  width: 100%;
+}
+
+.img__user {
+  width: 100px;
+  margin: auto;
+  padding-top: 1em;
 }
 
 .login__btn-active {
