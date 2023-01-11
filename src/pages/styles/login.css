@@ -3,6 +3,7 @@
   width: 100%;
   background-color: hsla(0, 1%, 72%, 0.1);
   position: relative;
+  padding-top: 2em;
 }
 
 .login__p {
@@ -17,14 +18,11 @@
   border: 1px solid #aaa5;
   width: 300px;
   height: 400px;
-  margin: auto;
   text-align: center;
   background-color: white;
-  position: fixed;
   right: 0;
   left: 0;
-  top: 50%;
-  bottom: 50%;
+  margin: auto;
 }
 
 .login__suggest {
