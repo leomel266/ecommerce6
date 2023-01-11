@@ -7,14 +7,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #aaa5;
+  border-bottom: 1px solid #aaa5;
+  width: 100%;
 }
 
 .navbar__list {
   display: flex;
   flex-direction: row;
   gap: 40px;
-  margin: 1em;
+  width: 250px;
+  border-left: 1px solid #aaa5;
+  height: 55px;
+  padding: 1em;
 }
 
 .rasp__menu-item-p {
