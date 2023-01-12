@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState } from "react";
+import toast, { Toaster } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserCart } from "../../store/slices/cart.slice";
 import getConfig from "../../utils/getConfig";
@@ -21,6 +22,10 @@ const ProductDescription = ({ product }) => {
     }
   };
 
+  const succesToast = () => {
+    toast.success("Added to Cart!");
+  };
+
   const handleCart = () => {
     const URL = "https://e-commerce-api.academlo.tech/api/v1/cart";
     const data = {
@@ -32,6 +37,7 @@ const ProductDescription = ({ product }) => {
       .then((res) => {
         console.log(res.data);
         dispatch(getUserCart());
+        succesToast();
       })
       .catch((err) => {
         if (err.response.status === 400) {
@@ -45,6 +51,7 @@ const ProductDescription = ({ product }) => {
           axios
             .patch(URLpatch, data, getConfig())
             .then((res) => {
+              succesToast();
               console.log(res.data);
               dispatch(getUserCart());
             })
@@ -54,6 +61,7 @@ const ProductDescription = ({ product }) => {
   };
   return (
     <article className='description-container'>
+      <Toaster position='top-center' reverseOrder={false} />
       <h2 className='description__title'>{product?.title}</h2>
       <div className='description__box'>
         <section className='description__product'>

@@ -66,7 +66,7 @@ const Header = () => {
           </ul>
         </nav>
       </div>
-      <Cart cartShow={cartShow} />
+      <Cart cartShow={cartShow} setCartShow={setCartShow} />
     </>
   );
 };

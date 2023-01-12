@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Toaster } from "react-hot-toast";
 import { useSelector } from "react-redux";
 import CardProducts from "../components/Home/CardProducts";
 import FilterCategory from "../components/Home/FilterCategory";
@@ -35,6 +36,9 @@ const Home = () => {
     +prod.price >= inputPrice.from && +prod.price <= inputPrice.to;
   return (
     <section className='home-container'>
+      <div>
+        <Toaster position='top-center' reverseOrder={false} />
+      </div>
       <input
         className='home__input'
         value={inputValue}

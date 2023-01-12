@@ -1,12 +1,13 @@
 import axios from "axios";
 import React, { useEffect } from "react";
+import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import CartProduct from "../components/Cart/CartProduct";
 import { getUserCart } from "../store/slices/cart.slice";
 import getConfig from "../utils/getConfig";
 import "./styles/cart.css";
 
-const Cart = ({ cartShow }) => {
+const Cart = ({ cartShow, setCartShow }) => {
   const cartProducts = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
@@ -28,13 +29,28 @@ const Cart = ({ cartShow }) => {
       .then((res) => {
         console.log(res.data);
         dispatch(getUserCart());
+        succesPurchaseToast();
       })
       .catch((err) => console.log(err));
   };
 
+  const handleCart = () => {
+    if (cartShow === false) {
+      setCartShow(true);
+    } else {
+      setCartShow(false);
+    }
+  };
+
+  const succesPurchaseToast = () => {
+    toast.success("Purchased!");
+  };
+
   return (
     <section className={`cart-container-${cartShow}`}>
-      <h2 className='cart__title'>Cart</h2>
+      <h2 onClick={handleCart} className='cart__title'>
+        Cart
+      </h2>
       <div className='cart__product-container'>
         {cartProducts?.map((product) => (
           <CartProduct key={product.id} product={product} />

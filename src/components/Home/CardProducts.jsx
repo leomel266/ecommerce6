@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { getUserCart } from "../../store/slices/cart.slice";
@@ -11,6 +12,10 @@ const CardProducts = ({ product }) => {
   const dispatch = useDispatch();
 
   const cart = useSelector((state) => state.cart);
+
+  const succesToast = () => {
+    toast.success("Added to Cart!");
+  };
 
   const handleClick = () => {
     navigate(`/products/${product.id}`);
@@ -29,6 +34,7 @@ const CardProducts = ({ product }) => {
       .then((res) => {
         console.log(res.data);
         dispatch(getUserCart());
+        succesToast();
       })
       .catch((err) => {
         if (err.response.status === 400) {
@@ -45,6 +51,7 @@ const CardProducts = ({ product }) => {
             .then((res) => {
               console.log(res.data);
               dispatch(getUserCart());
+              succesToast();
             })
             .catch((err) => console.log(err));
         }
