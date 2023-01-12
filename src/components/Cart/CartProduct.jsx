@@ -1,5 +1,6 @@
 import axios from "axios";
 import React from "react";
+import toast from "react-hot-toast";
 import { useDispatch } from "react-redux";
 import { getUserCart } from "../../store/slices/cart.slice";
 import getConfig from "../../utils/getConfig";
@@ -14,9 +15,15 @@ const CartProduct = ({ product }) => {
       .then((res) => {
         console.log(res.data);
         dispatch(getUserCart());
+        succesToast();
       })
       .catch((err) => console.log(err));
   };
+
+  const succesToast = () => {
+    toast.success("Deleted!");
+  };
+
   return (
     <article className='cart-product'>
       <header className='cart__header'>
