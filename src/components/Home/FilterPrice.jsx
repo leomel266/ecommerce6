@@ -40,7 +40,7 @@ const FilterPrice = ({ setInputPrice }) => {
             id='from'
           />
         </div>
-        <div>
+        <div className='filter__div'>
           <input
             placeholder='To'
             className='filter__input'

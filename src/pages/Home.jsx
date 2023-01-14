@@ -46,19 +46,23 @@ const Home = () => {
         placeholder='What are you looking for?'
         onChange={handleOnChange}
       />
-      <FilterPrice setInputPrice={setInputPrice} />
-      <FilterCategory setInputValue={setInputValue} />
-      <ToOrderProducts />
-      <div className='products-container'>
-        {productsFilter?.filter(filterCallBack).length !== 0 ? (
-          productsFilter
-            ?.filter(filterCallBack)
-            .map((product) => (
-              <CardProducts key={product.id} product={product} />
-            ))
-        ) : (
-          <h1>There are no products to this filter</h1>
-        )}
+      <div className='layout-container'>
+        <div className='filter__box'>
+          <FilterPrice setInputPrice={setInputPrice} />
+          <FilterCategory setInputValue={setInputValue} />
+        </div>
+        <ToOrderProducts />
+        <div className='products-container'>
+          {productsFilter?.filter(filterCallBack).length !== 0 ? (
+            productsFilter
+              ?.filter(filterCallBack)
+              .map((product) => (
+                <CardProducts key={product.id} product={product} />
+              ))
+          ) : (
+            <h1>There are no products to this filter</h1>
+          )}
+        </div>
       </div>
     </section>
   );

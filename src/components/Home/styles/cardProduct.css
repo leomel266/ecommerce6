@@ -92,3 +92,29 @@
 .product__btn i {
   font-size: 1.2rem;
 }
+
+@media screen and (min-width: 600px) {
+  .product {
+    width: 250px;
+    border: 1px solid #aaa5;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 200ms ease;
+  }
+
+  .product__body {
+    padding: 10px;
+  }
+
+  .product__btn {
+    width: 40px;
+  }
+
+  .product__name {
+    font-size: 1rem;
+    font-weight: 500;
+    grid-column: span 2;
+    width: 220px;
+    height: 60px;
+  }
+}

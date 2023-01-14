@@ -4,9 +4,15 @@
   margin-top: 1.5em;
 }
 
+.filter__div {
+  margin-left: 0.3em;
+  width: 150px;
+}
+
 .filter__input {
   margin: 0.5em;
   border: 1px solid #aaa5;
+  width: 140px;
 }
 
 .filter__form {
@@ -23,4 +29,10 @@
   height: 23px;
   background-color: #f85555;
   color: white;
+}
+
+@media screen and (min-width: 710px) {
+  .filter-container {
+    width: 190px;
+  }
 }
