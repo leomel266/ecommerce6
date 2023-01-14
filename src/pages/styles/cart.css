@@ -1,5 +1,6 @@
 .cart-container-true {
-  width: 100%;
+  width: 80%;
+  right: 0;
   height: 100vh;
   position: fixed;
   background-color: white;
@@ -35,7 +36,7 @@
 
 .cart__title {
   background-color: #f85555;
-  border-radius: 0.3em 0.3em 0 0;
+  border-radius: 0.3em 0 0 0;
   color: white;
   text-align: center;
 }
@@ -52,7 +53,7 @@
     background-color: #f85555;
     margin: 0;
     padding-left: 0.3em;
-    border-radius: 0.3em 0 0;
+    border-radius: 0.3em 0 0 0;
     color: white;
   }
 }

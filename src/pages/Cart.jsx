@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import toast from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import CartProduct from "../components/Cart/CartProduct";
+import NoUserCart from "../components/Cart/NoUserCart";
 import { getUserCart } from "../store/slices/cart.slice";
 import getConfig from "../utils/getConfig";
 import "./styles/cart.css";
@@ -56,19 +57,23 @@ const Cart = ({ cartShow, setCartShow }) => {
           <CartProduct key={product.id} product={product} />
         ))}
       </div>
-      <footer className='cart-footer'>
-        <span className='cart__span'>Total:</span>
-        <p className='cart__p'>
-          {cartProducts
-            ? cartProducts.reduce((acc, cv) => {
-                return cv.price * cv.productsInCart.quantity + acc;
-              }, 0)
-            : "empty"}
-        </p>
-        <button className='footer__btn' onClick={handleCheckout}>
-          Cheackout
-        </button>
-      </footer>
+      {localStorage.getItem("token") ? (
+        <footer className='cart-footer'>
+          <span className='cart__span'>Total:</span>
+          <p className='cart__p'>
+            {cartProducts
+              ? cartProducts.reduce((acc, cv) => {
+                  return cv.price * cv.productsInCart.quantity + acc;
+                }, 0)
+              : "empty"}
+          </p>
+          <button className='footer__btn' onClick={handleCheckout}>
+            Cheackout
+          </button>
+        </footer>
+      ) : (
+        <NoUserCart />
+      )}
     </section>
   );
 };

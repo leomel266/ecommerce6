@@ -1,0 +1,18 @@
+.footer__noUser {
+  width: 100%;
+  text-align: center;
+}
+
+.noUser__title {
+  padding-top: 0.7em;
+}
+
+.noUser__p {
+  padding-top: 0.5em;
+}
+
+.noUser__p a {
+  font-weight: 500;
+  cursor: pointer;
+  color: #f85555;
+}
